@@ -105,7 +105,7 @@
         try{
         $product=Product::find($id);
         $categories=Category::all();
-        return view('admin\editproduct',compact('product'),compact('categories'));
+        return view('admin/editproduct',compact('product'),compact('categories'));
 
           }
         catch(ModelNotFoundException $exception){
