@@ -1,6 +1,6 @@
 
 
-@extends('admin/master_layout')
+@extends('admin.master_layout')
 @section('title','edit product')
 
 

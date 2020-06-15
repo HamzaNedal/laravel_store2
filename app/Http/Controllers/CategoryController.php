@@ -34,12 +34,7 @@ class CategoryController extends Controller
     return view('admin/createCategory');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request)
     {
 
@@ -65,27 +60,13 @@ class CategoryController extends Controller
            return ;
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Category  $category
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Category $category)
-    {
-        //
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Category  $category
-     * @return \Illuminate\Http\Response
-     */
+
+
     public function edit($id)
     {
         $category =Category::findorfail($id);
-       return view('admin/editCategory', compact('category'));
+       return view('admin.editCategory', compact('category'));
 
     }
 
@@ -126,12 +107,6 @@ class CategoryController extends Controller
 
 
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Category  $category
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
 

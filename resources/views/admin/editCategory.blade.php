@@ -1,4 +1,5 @@
 @extends('admin/master_layout')
+
 @section('title','edit category')
 
 @section('content')

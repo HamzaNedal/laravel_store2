@@ -37,7 +37,7 @@ class UserController extends Controller
         try{
             $user=User::find($id);
             $roles=Role::all();
-            return view('admin/editUser',compact('user','roles'));
+            return view('admin.editUser',compact('user','roles'));
               }
             catch(ModelNotFoundException $exception){
                 return back()->with('error',' not found user '.$id) ;
