@@ -49,15 +49,20 @@ class CategoryController extends Controller
           'description'=> 'required'
 
         ]);
-
+    try{
         $category=new Category;
         $category->name=$request->name;
         $category->status=$request->status;
         $category->description=$request->description;
         $category->save();
 
+    return redirect()->route('category.index')->with('success','a new category has been added successfully') ;
+    }catch(ModelNotFoundException $exception){
 
-           return redirect()->route('category.index');
+      return back()->with('error','error adding a new category') ;
+
+    }
+           return ;
     }
 
     /**
