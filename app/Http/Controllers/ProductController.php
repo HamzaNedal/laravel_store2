@@ -105,7 +105,7 @@
         try{
         $product=Product::find($id);
         $categories=Category::all();
-        return view('admin\editproduct',compact('product','categories'));
+        return view('admin.editproduct',compact('product','categories'));
           }
         catch(ModelNotFoundException $exception){
             return back()->with('error',' not found category '.$id) ;
