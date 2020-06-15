@@ -21,7 +21,7 @@
 
         $products=Product::all();
 
-        return view('admin\Products',compact('products'));
+        return view('admin/products',compact('products'));
     }catch(ModelNotFoundException $exception){
         return back()->with('error',' not  found datat in the (products)  page  ') ;
 

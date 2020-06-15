@@ -14,7 +14,7 @@
         <div class="inner">
           <h3>{{$count_orders}}</h3>
 
-          <p>New Orders</p>
+          <p>New product</p>
         </div>
         <div class="icon">
           <i class="ion ion-bag"></i>
@@ -27,7 +27,7 @@
       <!-- small box -->
       <div class="small-box bg-success">
         <div class="inner">
-          <h3>{{$count_messages}}</h3>
+          <h3>{{$count_products}}</h3>
 
           <p>Messages</p>
         </div>

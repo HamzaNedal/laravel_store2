@@ -1,5 +1,3 @@
-
-
 @extends('admin/master_layout')
 @section('title',' view products ')
 
