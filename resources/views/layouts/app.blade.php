@@ -96,7 +96,7 @@
                                     @endauth
                                     @can('access_to_controll_panel')
 
-                                    <li style="margin-left: 22px"> <a href="{{route('product.index')}}" style="color:#141517  " ><i style="font-size: 22px  "class="fas fa-users-cog"></i>     </a>
+                                    <li style="margin-left: 22px"> <a href="{{route('Dashboard.index')}}" style="color:#141517  " ><i style="font-size: 22px  "class="fas fa-users-cog"></i>     </a>
                                         @endcan
 
                             </ul>
