@@ -44,7 +44,7 @@ class CategoryController extends Controller
     {
 
         $request->validate([
-          'name'=>'required|min:6|unique:categories',
+          'name'=>'required|unique:categories',
           'status'=> 'required|in:active,disable',
           'description'=> 'required'
 

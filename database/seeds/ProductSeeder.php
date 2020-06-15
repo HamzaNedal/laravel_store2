@@ -20,9 +20,7 @@ class ProductSeeder extends Seeder
             $img_pth = $faker->image(public_path('\product_images'));
             $public_path = public_path('\product_images');
             $image = str_replace($public_path . "\\", '', $img_pth);
-                dd(  $image);
-                dd(   $public_path);
-                dd(  $img_pth);
+
             $id_numbers = array();
             $i = 0;
 
