@@ -1,7 +1,7 @@
 
 
 @extends('admin/master_layout')
-@section('title',' view products ')
+@section('title',' view massages')
 
 
 @section('content')
