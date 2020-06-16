@@ -75,7 +75,7 @@
                                 <div class="single-popular-items mb-50 text-center">
                                     <div class="popular-img">
                                         <a href="{{route('home.show',['id'=>$product->id])}}">
-                                        <img src="/product_images/{{$product->image}}" alt="">
+                                        <img src="/product_images/{{$product->image}}" alt="image">
                                     </a>
                                         <div class="img-cap">
                                           <a>
