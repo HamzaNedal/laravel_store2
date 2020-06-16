@@ -75,19 +75,15 @@
                                 <div class="single-popular-items mb-50 text-center">
                                     <div class="popular-img">
                                         <a href="{{route('home.show',['id'=>$product->id])}}">
-                                        <img src="/product_images/{{$product->image}}" alt="image">
+                                        <img src="/product_images/{{$product->image}}" alt="{{$product->name}}">
                                     </a>
                                         <div class="img-cap">
-                                          <a>
                                            <span>
-                                           <form action="{{route('cart.store',['id'=>$product->id])}}">
+                                           <form action="{{route('cart.store',['id'=>$product->id])}}" method="POST">
                                             @csrf
-
-
                                             <input type="submit" style="width:223px"   class="btn btn-danger" value="Add to Cart">
                                            </form>
                                         </span>
-                                        </a>
                                         </div>
                                         <div class="favorit-items">
                                             <span class="flaticon-heart"></span>
