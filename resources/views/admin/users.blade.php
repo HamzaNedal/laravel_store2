@@ -40,10 +40,12 @@
                     @endforeach
                 </td>
                     <td>
+                        @can('access_to_edit_user')
 
                      <a class="remove-category  btn  btn-danger " data-value='{{$user->id}}' style ="color:#fff"><i class="far fa-trash-alt"></i>delete  </a>
                     <a class="btn btn-warning" style="color: #fff" href="{{route('user.edit',['id'=>$user->id])}}" data-target="#modal-danger">  <i class="fas fa-pencil-alt"></i> edit </a>
-                    </td>
+                    @endcan
+                </td>
                                </tr>
 
                     @endforeach

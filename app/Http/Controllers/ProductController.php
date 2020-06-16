@@ -25,7 +25,8 @@
     }catch(ModelNotFoundException $exception){
         return back()->with('error',' not  found datat in the (products)  page  ') ;
 
-    }}
+    }
+}
 
     /**
      * Show the form for creating a new resource.

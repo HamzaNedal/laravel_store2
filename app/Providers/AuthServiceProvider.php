@@ -52,6 +52,12 @@ class AuthServiceProvider extends ServiceProvider
 
 
         });
+
+        Gate::define('access_to_edit_user',function($user){
+            return $user->hasRole('admin');
+
+
+        });
         //
     }
 }

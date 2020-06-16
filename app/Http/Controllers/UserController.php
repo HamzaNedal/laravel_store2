@@ -21,50 +21,38 @@ class UserController extends Controller
      */
     public function index()
     {
-
-
-        if(Gate::denies('access_to_controll_panel')){
-
-            abort(403,'unauthorized access');
+        if (Gate::denies('access_to_controll_panel')) {
+            abort(403, 'unauthorized access');
         }
-        $users=User::all();
-        return view('admin/users' ,compact('users'));
+        $users = User::all();
+        return view('admin/users', compact('users'));
     }
 
 
     public function edit($id)
     {
-        try{
-            $user=User::find($id);
-            $roles=Role::all();
-            return view('admin.editUser',compact('user','roles'));
-              }
-            catch(ModelNotFoundException $exception){
-                return back()->with('error',' not found user '.$id) ;
-
-            }
+        if (Gate::denies('edit-user')) {
+            abort(403, 'unauthorized access to edit user');
+        }
+        try {
+            $user = User::find($id);
+            $roles = Role::all();
+            return view('admin.editUser', compact('user', 'roles'));
+        } catch (ModelNotFoundException $exception) {
+            return back()->with('error', ' not found user ' . $id);
+        }
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request,$id)
+
+    public function update(Request $request, $id)
     {
-
-
-        try {
-
-
-          $role_id= $request->role_id;
-
-                 RoleUser::where('user_id', $id )->updateOrCreate([
-                'name' => $request->name ?? "" ,
-                'user_id'=>$id ,
-                'role_id'=>$role_id ]);
+      try {
+            $role_id = $request->role_id;
+    RoleUser::where('user_id', $id)->updateOrCreate([
+                'name' => $request->name ?? "",
+                'user_id' => $id,
+                'role_id' => $role_id
+            ]);
 
             return redirect()->route('user.index')->with('success', 'user successfully updated');
         } catch (Exception $exception) {
@@ -83,6 +71,10 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
+
+        if (Gate::denies('delete-user')) {
+            abort(403, 'unauthorized access to delete user');
+        }
         try {
             $user = User::where('id', $id)->delete();
             return redirect()->route('user.index')->with('success', 'roles successfully deleted');
@@ -90,4 +82,5 @@ class UserController extends Controller
 
             return back()->with('error', 'error not found or role delete failed ');
         }
-    }}
+    }
+}
