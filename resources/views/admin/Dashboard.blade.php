@@ -12,7 +12,7 @@
       <!-- small box -->
       <div class="small-box bg-info">
         <div class="inner">
-          <h3>{{$count_orders}}</h3>
+          <h3>{{$count_products}}</h3>
 
           <p>New product</p>
         </div>
@@ -27,7 +27,7 @@
       <!-- small box -->
       <div class="small-box bg-success">
         <div class="inner">
-          <h3>{{$count_products}}</h3>
+          <h3>{{$count_messages}}</h3>
 
           <p>Messages</p>
         </div>
