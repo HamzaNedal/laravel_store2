@@ -75,7 +75,7 @@
                                 <div class="single-popular-items mb-50 text-center">
                                     <div class="popular-img">
                                         <a href="{{route('home.show',['id'=>$product->id])}}">
-                                        <img  src={{secure_asset("/product_images/$product->image") }}   alt="Error displaying images due to heroku hosting.......">
+                                        <img  src={{secure_asset("/product_images/$product->image") }}   alt="Error displaying images due to heroku hosting......................................">
 
 
                                     </a>
