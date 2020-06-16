@@ -76,7 +76,7 @@
             'long_description'=>$request->long_description,
             'category_id'=>$request->category_id,
             'image'=>$imageName,
-            'detials'=>$request->detials
+            'details'=>$request->details
             ]);
 
 

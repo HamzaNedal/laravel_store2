@@ -77,11 +77,16 @@
                                         <a href="{{route('home.show',['id'=>$product->id])}}">
                                         <img src="/product_images/{{$product->image}}" alt="">
                                     </a>
-                                        @csrf
                                         <div class="img-cap">
                                           <a>
-                                           <span> <input type="submit" style="width:223px"   class="btn btn-danger" value="Add to Cart">
-                                           </span>
+                                           <span>
+                                           <form action="{{route('cart.store',['id'=>$product->id])}}">
+                                            @csrf
+
+
+                                            <input type="submit" style="width:223px"   class="btn btn-danger" value="Add to Cart">
+                                           </form>
+                                        </span>
                                         </a>
                                         </div>
                                         <div class="favorit-items">
@@ -89,12 +94,13 @@
                                         </div>
                                     </div>
 
+
                                     <div class="popular-caption">
-                                    <h2>{{$product->name}}</h2>
-                                        <h6 > <a style="color: black" href="{{route('home.show',['id'=>$product->id])}}">
-                                           {{$product->details}}
-                                        </a></h6>
+                                        <a style="color: black" href="{{route('home.show',['id'=>$product->id])}}">
+                                        <h2>   {{$product->name}}</h2>
+                                        <h6>   {{$product->details}} </h6>
                                         <span>  {{$product->price}}</span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
