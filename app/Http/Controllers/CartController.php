@@ -41,7 +41,7 @@ class CartController extends Controller
           Cart::create([
           'product_id'=>$id,
           'user_id'=> Auth::id(),
-          'quantity'=>$request->quantity
+          'quantity'=>$request->quantity ?:'1'
           ]);
          return  redirect()->route('cart.index')->with('success','A new product has been added to cart ');
         }
