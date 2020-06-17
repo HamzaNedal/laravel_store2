@@ -40,7 +40,7 @@
                              {{-- {{  dd($categories)}} --}}
                                 @foreach ($categories as $category )
 
-                                <a class="nav-item nav-link " id="nav-home-tab"   href="{{route('home.category_products',['id'=>$category->id])}}">
+                                <a class="nav-item nav-link active " id="nav-home-tab"   href="{{route('home.category_products',['id'=>$category->id])}}">
                                     {{$category->name}}
                                 </a>
                                     @endforeach
