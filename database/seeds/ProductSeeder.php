@@ -16,8 +16,8 @@ class ProductSeeder extends Seeder
         $faker = Faker\Factory::create();
         $category = Category::select('id')->get();
 
-        foreach (range(1, 9) as $index) {
-            $img_pth = $faker->image(public_path('product_images'));
+        foreach (range(1,3) as $index) {
+            $img_pth = $faker->image(public_path('\product_images'));
             $public_path = public_path('\product_images');
             $image = str_replace($public_path . "\\", '', $img_pth);
 

@@ -37,7 +37,7 @@
                     <td>{{$product->details}}</td>
 
                     <td>{{$product->long_description}}</td>
-                    <td><img  src={{secure_asset("/product_images/$product->image") }}  width="99px" alt="Error displaying images due to heroku hosting"></td>
+                    <td><img  src={{asset("/product_images/$product->image") }}  width="99px" alt="Error displaying images due to heroku hosting"></td>
                     <td>{{$product->created_at->diffForHumans()}}</td>
                     <td>
 

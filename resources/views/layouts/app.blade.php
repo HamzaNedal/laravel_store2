@@ -46,13 +46,13 @@
                     <div class="menu-wrapper">
                         <!-- Logo -->
                         <div class="logo">
-                        <span style="color: red">  <a  style="color:rgb(0, 0, 0); font-size: 30px" href="{{route('home.index')}}"> my store </a></span>
+                        <span style="color: red">  <a  style="color:rgb(0, 0, 0); font-size: 30px" href="{{route('home.index')}}"> my store  </a></span>
                         </div>
                         <!-- Main-menu -->
                         <div class="main-menu d-none d-lg-block">
                             <nav>
                                 <ul id="navigation">
-                                    <li><a href="{{route('home.index')}}">Home</a></li>
+                                    <li><a href="{{route('home.index')}}">home </a></li>
                                 <li><a href="{{route('about.index')}}">about</a></li>
                                  <li><a href="{{route('contact.index')}}">contact</a></li>
                                     <li><a href="#">Pages</a>
@@ -99,6 +99,8 @@
                                     <li style="margin-left: 22px"> <a href="{{route('Dashboard.index')}}" style="color:#141517  " ><i style="font-size: 22px  "class="fas fa-users-cog"></i>     </a>
                                         @endcan
 
+
+                                    {{-- <li> <a> {{app()->getLocale()}}</a></li> --}}
                             </ul>
 
                         </div>
